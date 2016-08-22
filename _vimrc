@@ -51,9 +51,12 @@ set clipboard+=unnamed
 set autochdir
 cd ~/Desktop
 
+set splitbelow
+set splitright
+
 " shortcuts
 map <F2> :NERDTreeToggle<CR>
-map <C-/> :Commentary<CR>
+map <C-M> :Commentary<CR>
 map <F5> :!python %<CR>
 " split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -61,6 +64,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+" 自动检测文件类型并加载设置，设置空格代替Tab
+filetype plugin indent on
+autocmd FileType python setlocal et sta sw=4 sts=4
+autocmd FileType python setlocal foldmethod=indent
+set foldlevel=99
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -154,7 +163,7 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
-    set lines=24 columns=80 linespace=0
+    set lines=999 columns=999 linespace=0
     if has('gui_win32')
         set guifont=consolas:h14:w7
     endif
