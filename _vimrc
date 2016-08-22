@@ -24,7 +24,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 
 " Coding Web
-" Plugin 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim'
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'Valloric/YouCompleteMe'
 
@@ -57,7 +57,6 @@ set splitright
 " shortcuts
 map <F2> :NERDTreeToggle<CR>
 map <C-M> :Commentary<CR>
-map <F5> :!python %<CR>
 " split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -67,9 +66,11 @@ nnoremap <C-H> <C-W><C-H>
 
 " 自动检测文件类型并加载设置，设置空格代替Tab
 filetype plugin indent on
-autocmd FileType python setlocal et sta sw=4 sts=4
-autocmd FileType python setlocal foldmethod=indent
+au FileType python setlocal et sta sw=4 sts=4
+au FileType python setlocal foldmethod=indent
+au FileType python nmap <F5> :!python %<CR>
 set foldlevel=99
+nnoremap <space> za
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
