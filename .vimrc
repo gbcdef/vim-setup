@@ -15,7 +15,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Lokaltog/powerline', {'rtp': ‘powerline/bindings/vim/‘}
 
 " Coding general
 Plugin 'tpope/vim-markdown'
@@ -25,7 +24,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 
 " Coding Web
-" Plugin 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim'
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'Valloric/YouCompleteMe'
 
@@ -49,16 +48,29 @@ call vundle#end()            " required
 set nu
 set shortmess=atI
 set clipboard+=unnamed
+set autochdir
+cd ~/Desktop
+
+set splitbelow
+set splitright
 
 " shortcuts
 map <F2> :NERDTreeToggle<CR>
-map <C-/> :Commentary<CR>
+map <C-M> :Commentary<CR>
 " split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+" 自动检测文件类型并加载设置，设置空格代替Tab
+filetype plugin indent on
+au FileType python setlocal et sta sw=4 sts=4
+au FileType python setlocal foldmethod=indent
+au FileType python nmap <F5> :!python %<CR>
+set foldlevel=99
+nnoremap <space> za
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -152,7 +164,7 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
-    set lines=24 columns=80 linespace=0
+    set lines=999 columns=999 linespace=0
     if has('gui_win32')
         set guifont=consolas:h14:w7
     endif
