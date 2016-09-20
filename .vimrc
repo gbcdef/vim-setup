@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " Mac & Linux Vundle begin
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+ set rtp+=~/.vim/bundle/Vundle.vim/
+ call vundle#begin()
 
 " Windows Vundle
 " set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
@@ -68,7 +68,7 @@ nnoremap <C-H> <C-W><C-H>
 filetype plugin indent on
 au FileType python setlocal et sta sw=4 sts=4
 au FileType python setlocal foldmethod=indent
-au FileType python nmap <F5> :!python %<CR>
+au FileType python nnoremap <F5> :w!<CR>:!python %<CR>
 set foldlevel=99
 nnoremap <space> za
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -167,9 +167,11 @@ if has("gui_running")
     set lines=999 columns=999 linespace=0
     if has('gui_win32')
         set guifont=consolas:h14:w7
+    elseif has('gui_gtk2')
+        set guifont=Monospace\ 16
     endif
 else
-    colorscheme Zenburn
+    colorscheme desert
 endif
 
 set encoding=utf-8
