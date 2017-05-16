@@ -15,6 +15,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Coding general
 Plugin 'tpope/vim-markdown'
@@ -29,7 +31,7 @@ Plugin 'mattn/emmet-vim'
 " Plugin 'Valloric/YouCompleteMe'
 
 " Coding Python
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 
 " Others
 Plugin 'L9'
