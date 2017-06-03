@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
+" Quick Install Vundle Vim
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " Mac & Linux Vundle begin
  set rtp+=~/.vim/bundle/Vundle.vim/
  call vundle#begin()
@@ -51,7 +52,6 @@ set nu
 set shortmess=atI
 set clipboard+=unnamed
 set autochdir
-cd ~/Desktop
 
 set splitbelow
 set splitright
