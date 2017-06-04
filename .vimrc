@@ -17,6 +17,7 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'morhetz/gruvbox'
 
 " Coding general
 Plugin 'tpope/vim-markdown'
@@ -51,7 +52,7 @@ set nu
 set shortmess=atI
 set clipboard+=unnamed
 set autochdir
-cd ~/Desktop
+" cd ~/Desktop
 
 set splitbelow
 set splitright
@@ -173,7 +174,7 @@ if has("gui_running")
         set guifont=Monospace\ 16
     endif
 else
-    colorscheme desert
+    colorscheme gruvbox
 endif
 
 set encoding=utf-8
