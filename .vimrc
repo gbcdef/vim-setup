@@ -19,6 +19,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'morhetz/gruvbox'
+Plugin 'sickill/vim-monokai'
 
 " Coding general
 Plugin 'tpope/vim-markdown'
@@ -29,9 +30,11 @@ Plugin 'scrooloose/nerdtree'
 
 " Coding Web
 Plugin 'mattn/emmet-vim'
+Plugin 'posva/vim-vue'
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'digitaltoad/vim-pug'
 " Coding Python
 " Plugin 'klen/python-mode'
 
@@ -160,7 +163,7 @@ syntax enable
 " Set extra options when running in GUI mode
 if has("gui_running")
     set background=dark
-    colorscheme solarized
+    colorscheme monokai
 
     set guioptions-=T
     set guioptions-=m
