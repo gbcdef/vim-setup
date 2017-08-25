@@ -31,12 +31,10 @@ Plugin 'scrooloose/nerdtree'
 " Coding Web
 Plugin 'mattn/emmet-vim'
 Plugin 'posva/vim-vue'
-" Plugin 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 " Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'digitaltoad/vim-pug'
-" Coding Python
-" Plugin 'klen/python-mode'
 
 " Others
 Plugin 'L9'
@@ -54,7 +52,8 @@ call vundle#end()            " required
 " => Guibin Customized
 set nu
 set shortmess=atI
-set clipboard+=unnamed
+set clipboard=unnamed
+set mouse=nicr
 set autochdir
 
 set splitbelow
@@ -64,6 +63,7 @@ set splitright
 map <F2> :NERDTreeToggle<CR>
 map <C-M> :Commentary<CR>
 " split navigations
+" NormalmodeNOREMAP normal模式下不会递归映射
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
