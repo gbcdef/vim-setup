@@ -14,14 +14,16 @@ Plugin 'VundleVim/Vundle.vim'
 
 " UI
 Plugin 'godlygeek/tabular'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'morhetz/gruvbox'
-Plugin 'sickill/vim-monokai'
 
-" Coding general
+" Themes
+Plugin 'morhetz/gruvbox'
+" Plugin 'sickill/vim-monokai'
+" Plugin 'jnurmine/Zenburn'
+" Plugin 'altercation/vim-colors-solarized'
+
+" programming
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
@@ -30,11 +32,9 @@ Plugin 'scrooloose/nerdtree'
 
 " Coding Web
 Plugin 'mattn/emmet-vim'
-Plugin 'posva/vim-vue'
-Plugin 'kchmck/vim-coffee-script'
-" Plugin 'Valloric/YouCompleteMe'
-
-Plugin 'digitaltoad/vim-pug'
+" Plugin 'posva/vim-vue'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'digitaltoad/vim-pug'
 
 " Others
 Plugin 'L9'
