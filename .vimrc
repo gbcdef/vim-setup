@@ -18,10 +18,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Themes
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
 " Plugin 'sickill/vim-monokai'
 " Plugin 'jnurmine/Zenburn'
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 " programming
 Plugin 'tpope/vim-markdown'
@@ -29,6 +29,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+
 
 " Coding Web
 Plugin 'mattn/emmet-vim'
@@ -68,6 +69,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <space> za
 
 
 " 自动检测文件类型并加载设置，设置空格代替Tab
@@ -75,8 +77,15 @@ filetype plugin indent on
 au FileType python setlocal et sta sw=4 sts=4
 au FileType python setlocal foldmethod=indent
 au FileType python nnoremap <F5> :w!<CR>:!python %<CR>
+
 set foldlevel=99
 nnoremap <space> za
+
+" 光标显示方式
+" set guicursor=n-v-c:ver35-Cursor
+set cursorline
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -158,12 +167,11 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
-
+set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set background=dark
-    colorscheme monokai
+    colorscheme solarized
 
     set guioptions-=T
     set guioptions-=m
@@ -177,8 +185,10 @@ if has("gui_running")
         set guifont=Monospace\ 16
     endif
 else
-    colorscheme gruvbox
+    colorscheme solarized
 endif
+
+
 
 set encoding=utf-8
 set langmenu=zh_CN.UTF-8
